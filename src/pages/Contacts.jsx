@@ -14,6 +14,8 @@ export default function Contacts() {
               center: [41.019484, 28.884538],
               zoom: 10,
             }}
+            width={"600px"}
+            height={"300px"}
           >
             <Placemark geometry={[41.019484, 28.884538]} />
           </Map>

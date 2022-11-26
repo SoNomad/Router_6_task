@@ -11,7 +11,7 @@
 .container {
   --bs-gutter-x: 0;
   align-items: center;
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 .wrapper {
@@ -33,36 +33,40 @@ h3 {
   font-size: 1.75rem;
 }
 
-a div {
+a,
+.active,
+.in-active {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
   font-size: 16px;
   text-shadow: 0 0.05rem 0.1rem rgb(0 0 0 / 50%);
-  padding-bottom: 5px;
+  padding-bottom: 4px;
+  margin-right: 16px;
 }
-
-.nav-link {
-  padding-right: 2px;
+.nav a:last-child {
+  margin-right: 0;
 }
-
 .in-active {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .in-active:hover {
   border-bottom: 4px solid rgb(126, 126, 126);
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.active {
+.active,
+.active:hover {
   border-bottom: 4px solid white;
+  color: #fff;
 }
 
 .footer {
   padding-bottom: 35px;
 }
 
-.shadow {
+.shadoww {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -88,8 +92,6 @@ a div {
 }
 
 .map {
-  width: 400px;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;

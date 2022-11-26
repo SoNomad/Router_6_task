@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
-  const [name, setName] = useState("home");
+  // const [name, setName] = useState("home");
 
   return (
     <div className="container nav mt-2 justify-content-between">
@@ -10,27 +10,25 @@ export default function Header() {
         <h3>Cover</h3>
       </div>
       <div className="nav">
-        <Link to="/" className="nav-link" onClick={() => setName("home")}>
-          <div className={name === "home" ? "active" : "in-active"}> Home</div>
-        </Link>
-        <Link
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : "in-active")}
+        >
+          Home
+        </NavLink>
+
+        <NavLink
           to="/features"
-          className="nav-link"
-          onClick={() => setName("features")}
+          className={({ isActive }) => (isActive ? "active" : "in-active")}
         >
-          <div className={name === "features" ? "active" : "in-active"}>
-            Features
-          </div>
-        </Link>
-        <Link
+          Features
+        </NavLink>
+        <NavLink
           to="/contacts"
-          className="nav-link"
-          onClick={() => setName("contacts")}
+          className={({ isActive }) => (isActive ? "active" : "in-active")}
         >
-          <div className={name === "contacts" ? "active" : "in-active"}>
-            Contacts
-          </div>
-        </Link>
+          Contact
+        </NavLink>
       </div>
     </div>
   );
