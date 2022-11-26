@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Header() {
-  // const [name, setName] = useState("home");
+  const setClass = ({ isActive }) => (isActive ? "active" : "in-active");
 
   return (
     <div className="container nav mt-2 justify-content-between">
@@ -10,23 +10,14 @@ export default function Header() {
         <h3>Cover</h3>
       </div>
       <div className="nav">
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "active" : "in-active")}
-        >
+        <NavLink to="/" className={setClass}>
           Home
         </NavLink>
 
-        <NavLink
-          to="/features"
-          className={({ isActive }) => (isActive ? "active" : "in-active")}
-        >
+        <NavLink to="/features" className={setClass}>
           Features
         </NavLink>
-        <NavLink
-          to="/contacts"
-          className={({ isActive }) => (isActive ? "active" : "in-active")}
-        >
+        <NavLink to="/contacts" className={setClass}>
           Contact
         </NavLink>
       </div>
